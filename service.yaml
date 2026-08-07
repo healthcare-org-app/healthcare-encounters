@@ -1,0 +1,15 @@
+name: encounters-service
+port: 8301
+lang: python
+description: "encounters-service \u2014 domain: ehr"
+http_deps:
+- patients-service
+- providers-service
+- appointments-service
+- audit-log-service
+publishes:
+- encounter.started
+- encounter.ended
+- audit.event
+subscribes:
+- appointment.booked
