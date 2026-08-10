@@ -1,7 +1,7 @@
 services:
   encounters-service:
     build: .
-    container_name: ${NAME_UNDERSCORE}
+    container_name: encounters_service
     depends_on:
       postgres:
         condition: service_healthy
